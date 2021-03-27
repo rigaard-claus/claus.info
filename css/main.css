@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* 
+    Created on : 27 мар. 2021 г., 11:02:44
+    Author     : Rigaard
+*/
+img {
+    border: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.backGround {
+    background: #FDFDFD; /* old browser */
+    background: linear-gradient(to top, #FDFDFD, #C9C9C9);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.mainArrea {
+    height: 2000px;
+    border: 2px solid #DCDCDC;
+    background: #F0F0F0;
+    height: 100vh; 
+    border-radius: 3vh 3vh;   
+}
+
+.mainTableArrea {
+    width: 100%;
+}
+
+.header {
+    padding: 3%;
+    /*background: #FDFDFD;*/
+}
+
+.rigaardart {
+    
+}
+
+.mainmenu {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.mainmenu tr {
+
+}
+
+.mainmenu tr th {
+    
+}
+
+.mainmenu tr th div{
+    font-size:large;
+    font-family: Verdana;
+    color: #666A6E;
+    padding-top: 30px;
+    text-align:center;
+    height: 50px;
+    background: #E3E3E3;
+}
+
+.mainmenu tr th div:hover{
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #CACACA;
+}
+
+.first_menu_element {
+    border-top-left-radius: 5vh 5vh;  
+    border-bottom-left-radius: 5vh 5vh;
+}
+
+.last_menu_element {
+    border-top-right-radius: 5vh 5vh; 
+    border-bottom-right-radius: 5vh 5vh;
+}
+
+.bottom_area {
+    position: absolute;
+    bottom: -5%;
+    right: 12%;
+}
+
+.copyright {
+    font-style:italic;
+    font-size:large;
+    font-family: Verdana;
+    color: #666A6E;
+}
+
+.textContent {
+    text-align: center;
+}
+
+.textContent p{
+    font-style:italic;
+    font-size:large;
+    font-family: cursive;
+    color: #535252;
+}
+
+.textContent h1{
+    color: #898C95;
+}
+
+.language {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
