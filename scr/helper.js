@@ -50,9 +50,10 @@ function demo_radiant_chart() {
         var json_keys = Object.keys(json);
         try
         {
+            var maxValue = 0;
             do
             {
-                var maxValue = 0;
+                maxValue = 0;
                 $.each(json_keys, function() {
                     if(maxValue<json[this]) {
                         maxValue=json[this];
@@ -71,10 +72,8 @@ function demo_radiant_chart() {
                               default_delimiter = 10;
                         }
                         $.each(json_keys, function() {
-                        if(maxValue<json[this]) {
                             json[this] = Math.round(json[this]/default_delimiter);
-                        }
-                    });
+                        });
                     }
                 }
             }
