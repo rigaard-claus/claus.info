@@ -378,6 +378,40 @@ var rigaard_radiant_chart = (function() {
                     rigaard_canvas.point(this["x"],this["y"],3,"#2E90E8"); // coordinate point
                     if(d + 1 == coordinate_sheet.length) { // last round, draw coordinate line
                         rigaard_canvas.line(x_center_point,y_center_point,this["x"],this["y"],2,"#2E90E8");
+                        
+                        if(countParameters==3) {
+                            if(message_key!=0) {
+                                quadrant++;
+                            }
+                        }
+                        else {
+                            if(countParameters%4!=0) {
+                                if(countParameters%2!=0) {
+                                    if(message_key%round_delimiter==0 && message_key!=0) {
+                                        quadrant++;
+                                    }
+                                }
+                                else {
+                                    if(message_key <= countParameters/2)
+                                    {
+                                        if((message_key%round_delimiter==0 && message_key!=0) || message_key == countParameters/2) {
+                                            quadrant++;
+                                        }
+                                    }
+                                    else {
+                                        if(((message_key-1)%round_delimiter==0)) {
+                                            quadrant++;
+                                        }
+                                    }
+                                }
+                            }
+                            else {
+                                if(message_key !=0 && message_key !=1 && (message_key-1)%round_delimiter==0) {
+                                    quadrant++;
+                                }
+                            }
+                        }
+                        
                         //set name coordinate line
                         if(quadrant==1) {
                             rigaard_canvas.message(this["x"]+Math.floor(area_size/100),this["y"]-Math.floor(area_size/20),json_keys[message_key],Math.floor(area_size/32),"sans-serif","#FFFFFF","#529CC1");
@@ -391,21 +425,9 @@ var rigaard_radiant_chart = (function() {
                         if(quadrant==4) {
                             rigaard_canvas.message(this["x"]-Math.floor(area_size/100),this["y"]-Math.floor(area_size/20),json_keys[message_key],Math.floor(area_size/32),"sans-serif","#FFFFFF","#529CC1",true);
                         }
-//                        console.log("quadrant="+quadrant+", "+json_keys[message_key] + " : " + message_key + "/" + round_delimiter);
+                        //console.log("quadrant="+quadrant+", "+json_keys[message_key] + " : " + message_key + "/" + round_delimiter);
+                                                
                         message_key++;
-
-                        //find the position for the next message
-                        if(countParameters > 3 && ((quadrant == 1 && message_key%round_delimiter==0 && countParameters%2==0) || //even
-                                (quadrant == 1 && message_key>1 && (message_key-1)%round_delimiter==0 && countParameters%2!=0) || //not even
-                                (quadrant>1 && (message_key+1)%round_delimiter==0 && countParameters%2==0) || //even 
-                                (quadrant>1 && (message_key)%round_delimiter>0 && countParameters%2!=0))) { //not even 
-                            quadrant++;
-                        }
-                        else {
-                            if(countParameters==3) {
-                                quadrant++;
-                            }
-                        }
                     }
                 });
             }

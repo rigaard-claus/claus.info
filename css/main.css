@@ -15,16 +15,15 @@ a {
     background: #FDFDFD; /* old browser */
     background: linear-gradient(to top, #FDFDFD, #C9C9C9);
     padding-top: 2%;
-    padding-bottom: 2%;
+    padding-bottom: 0;
     padding-left: 10%;
     padding-right: 10%;
 }
 
 .mainArrea {
-    height: 2000px;
+    height: auto;
     border: 2px solid #DCDCDC;
     background: #F0F0F0;
-    height: 100vh; 
     border-radius: 3vh 3vh;   
 }
 
@@ -82,7 +81,7 @@ a {
 }
 
 .bottom_area {
-    position: absolute;
+    float: right;
     bottom: -5%;
     right: 12%;
 }
@@ -113,4 +112,85 @@ a {
     position: absolute;
     top: 10%;
     right: 12%;
+}
+
+.main_tools_area {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn_tool {
+    /*border: none;*/
+    margin: 2vh;
+    width: 50vh;
+    height: 50px;
+    color: #666A6E;
+    background-color: #E3E3E3;
+    border: none;
+    font-size:large;
+    font-family: Verdana;
+    border-radius: 3vh 3vh;
+}
+
+.btn_tool:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #CACACA;
+}
+
+ /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container demoareatooltiptext */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.demo_error_log {
+    padding: 10px;
+    background-color: #F5342B;
+    color: #FFFFFF;
+    font-size:large;
+    font-family: Verdana;
+    border-top-left-radius: 3vh 3vh; 
+    border-top-right-radius: 3vh 3vh;
 }
