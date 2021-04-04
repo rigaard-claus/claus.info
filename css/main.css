@@ -24,7 +24,8 @@ a {
     height: auto;
     border: 2px solid #DCDCDC;
     background: #F0F0F0;
-    border-radius: 3vh 3vh;   
+    border-radius: 3vh 3vh;
+    min-width: 800px;
 }
 
 .mainTableArrea {
@@ -51,7 +52,7 @@ a {
 }
 
 .mainmenu tr th {
-    
+    width: 33%;
 }
 
 .mainmenu tr th div{
@@ -98,10 +99,14 @@ a {
 }
 
 .textContent p{
+    padding-left: 10%;
+    padding-right: 10%;
     font-style:italic;
-    font-size:large;
+    font-size:20px;
     font-family: cursive;
     color: #535252;
+    text-align: justify;   
+    text-indent: 5em;
 }
 
 .textContent h1{
@@ -192,4 +197,16 @@ a {
     font-family: Verdana;
     border-top-left-radius: 3vh 3vh; 
     border-top-right-radius: 3vh 3vh;
+}
+
+.language_float_btn {
+    float: right;
+}
+
+.language_float_btn button {
+    border: none;
+}
+
+.language_float_btn button:hover{
+    cursor: pointer;
 }

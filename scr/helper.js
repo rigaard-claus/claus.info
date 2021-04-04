@@ -1,5 +1,14 @@
 function InitHelper() {
     DrawMainChart();
+    InitTranslator();
+}
+
+function InitTools() {
+    InitTranslator("tool_menu");
+}
+
+function InitAbout() {
+    InitTranslator("about");
 }
 
 function DrawMainChart() {
@@ -14,15 +23,22 @@ function init_demo_radiant_chart() {
     $(".btn_area").hide();//hide control panel
     var main_div = $(".main_tools_area");
     
+    console.log(document.cookie + " | " + document.cookie.indexOf("lang=ru"));
+    
+    //check lang
+    var ru_lang = document.cookie.indexOf("lang=ru")>0;
+    
     //create demo area
     var div_demo_area = '<div class="main_demo_area"><div class="demo_control_panel">'
             + '<span id="demo_error_log"></span></br>'
-            + '<div class="tooltip"><span class="tooltiptext">Replace or edit this json</span>'
-            + '<textarea type="textarea" id="txt_json_input" rows="3" cols="65">'
+            + '<div class="tooltip"><span class="tooltiptext">'
+            + (ru_lang ?  'Замените или отредактируйте этот json ' : 'Replace or edit this json')
+            + '</span><textarea type="textarea" id="txt_json_input" rows="3" cols="65">'
             + '{"Pyton":7,"C++":6,"Perl":7,"VB":9,"Java":6,"Delphi":8,"Ruby":6}'//default json line
             + '</textarea></div></br><button onclick="demo_radiant_chart();" '
-            + 'id="btn_create_chart_demo" class="btn_tool">CREATE CHART</button>'
-            + '</div><div class="rigaard_canvas"></div></div>';
+            + 'id="btn_create_chart_demo" class="btn_tool">' 
+            + (ru_lang ? 'ПОСТРОИТЬ ДИАГРАММУ' : 'CREATE CHART')
+            + '</button></div><div class="rigaard_canvas"></div></div>';
     $(main_div).html(div_demo_area);
 }
 

@@ -1,0 +1,14 @@
+{
+    "en": 
+            {
+                "main_menu" : ["Home","Tools","About me"],
+                "tool_menu" : [{"START CHART DEMO" : ["CREATE CHART"]}],
+                "about" : [{"about_me":{"header":"About me","text":"coming soon..."}}]
+            },
+    "ru": 
+            {
+                "main_menu" : ["Главная","Инструменты","Обо мне"],
+                "tool_menu" : [{"ЗАПУСК ДИАГРАММЫ DEMO" : ["СОЗДАТЬ ДИАГРАММУ"]}],
+                "about" : [{"about_me":{"header":"Обо мне","text":"в ближайшее время..."}}]    
+            }
+}

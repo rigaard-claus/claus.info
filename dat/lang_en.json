@@ -1,0 +1,8 @@
+{
+    "en": 
+            {
+                "main_menu" : ["Home","Tools","About me"],
+                "tool_menu" : [{"START CHART DEMO" : ["CREATE CHART"]}],
+                "about" : [{"about_me":{"header":"About me","text":"I am a developer with over 10 years of experience. I work with C #, ASP, PHP, JS (JQuery, Json, Ajax ...), AS, SQL (MS / MY), HTML5, CSS ... I have developed powerful data collection and processing applications. I know how to optimize when the standard framework fails and doesn't want to handle a large data stream (multiple thread conflicts). I can develop plugins for ready-made projects and much more."}}]
+            }
+}
