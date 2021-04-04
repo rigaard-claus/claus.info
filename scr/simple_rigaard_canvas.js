@@ -304,7 +304,7 @@ var rigaard_radiant_chart = (function() {
             var countParameters = json_keys.length;
 //            console.log('length=' + countParameters);
             
-            var round_delimiter = Math.round(countParameters/4);
+            var round_delimiter = countParameters/4;
 //            console.log(round_delimiter);
             
             //init canvas area
@@ -379,36 +379,9 @@ var rigaard_radiant_chart = (function() {
                     if(d + 1 == coordinate_sheet.length) { // last round, draw coordinate line
                         rigaard_canvas.line(x_center_point,y_center_point,this["x"],this["y"],2,"#2E90E8");
                         
-                        if(countParameters==3) {
-                            if(message_key!=0) {
+                        if(message_key!=0) {
+                            if(countParameters==3 || (message_key/round_delimiter>=1 && quadrant==1) || (message_key/round_delimiter>=2 && quadrant==2) || (message_key/round_delimiter>=3 && quadrant==3)) {
                                 quadrant++;
-                            }
-                        }
-                        else {
-                            if(countParameters%4!=0) {
-                                if(countParameters%2!=0) {
-                                    if(message_key%round_delimiter==0 && message_key!=0) {
-                                        quadrant++;
-                                    }
-                                }
-                                else {
-                                    if(message_key <= countParameters/2)
-                                    {
-                                        if((message_key%round_delimiter==0 && message_key!=0) || message_key == countParameters/2) {
-                                            quadrant++;
-                                        }
-                                    }
-                                    else {
-                                        if(((message_key-1)%round_delimiter==0)) {
-                                            quadrant++;
-                                        }
-                                    }
-                                }
-                            }
-                            else {
-                                if(message_key !=0 && message_key !=1 && (message_key-1)%round_delimiter==0) {
-                                    quadrant++;
-                                }
                             }
                         }
                         
