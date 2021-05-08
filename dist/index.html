@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RigaardArt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="rigaard_container">
+        <div class="backGround">
+            <div class="mainArrea">
+                <table class="mainTableArrea">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <header-component></header-component>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <menu-component></menu-component>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <!-- <main-component></main-component> -->
+                                <div :is="current_component" :swap-component="swap_component"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="bottom_area">
+                    <div class="copyright">
+                        <p>Rigaard Claus &copy; 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

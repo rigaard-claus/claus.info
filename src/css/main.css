@@ -1,0 +1,212 @@
+/* @charset "utf-8"; */
+/* 
+    Created on : 27 мар. 2021 г., 11:02:44
+    Author     : Rigaard
+*/
+img {
+    border: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.backGround {
+    background: #FDFDFD; /* old browser */
+    background: linear-gradient(to top, #FDFDFD, #C9C9C9);
+    padding-top: 2%;
+    padding-bottom: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.mainArrea {
+    height: auto;
+    border: 2px solid #DCDCDC;
+    background: #F0F0F0;
+    border-radius: 3vh 3vh;
+    min-width: 800px;
+}
+
+.mainTableArrea {
+    width: 100%;
+}
+
+.header {
+    padding: 3%;
+    /*background: #FDFDFD;*/
+}
+
+.rigaardart {
+    
+}
+
+.mainmenu {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+}
+
+.mainmenu tr {
+
+}
+
+.mainmenu tr th {
+    width: 33%;
+}
+
+.mainmenu tr th div{
+    font-size:large;
+    font-family: Verdana;
+    color: #666A6E;
+    padding-top: 30px;
+    text-align:center;
+    height: 50px;
+    background: #E3E3E3;
+}
+
+.mainmenu tr th div:hover{
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #CACACA;
+}
+
+.first_menu_element {
+    border-top-left-radius: 5vh 5vh;  
+    border-bottom-left-radius: 5vh 5vh;
+}
+
+.last_menu_element {
+    border-top-right-radius: 5vh 5vh; 
+    border-bottom-right-radius: 5vh 5vh;
+}
+
+.bottom_area {
+    float: right;
+    bottom: -5%;
+    right: 12%;
+}
+
+.copyright {
+    font-style:italic;
+    font-size:large;
+    font-family: Verdana;
+    color: #666A6E;
+}
+
+.textContent {
+    text-align: center;
+}
+
+.textContent p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-style:italic;
+    font-size:20px;
+    font-family: cursive;
+    color: #535252;
+    text-align: justify;   
+    text-indent: 5em;
+}
+
+.textContent h1{
+    color: #898C95;
+}
+
+.language {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
+
+.main_tools_area {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn_tool {
+    /*border: none;*/
+    margin: 2vh;
+    width: 50vh;
+    height: 50px;
+    color: #666A6E;
+    background-color: #E3E3E3;
+    border: none;
+    font-size:large;
+    font-family: Verdana;
+    border-radius: 3vh 3vh;
+}
+
+.btn_tool:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #CACACA;
+}
+
+ /* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container demoareatooltiptext */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.demo_error_log {
+    padding: 10px;
+    background-color: #F5342B;
+    color: #FFFFFF;
+    font-size:large;
+    font-family: Verdana;
+    border-top-left-radius: 3vh 3vh; 
+    border-top-right-radius: 3vh 3vh;
+}
+
+.language_float_btn {
+    float: right;
+}
+
+.language_float_btn button {
+    border: none;
+}
+
+.language_float_btn button:hover{
+    cursor: pointer;
+}
