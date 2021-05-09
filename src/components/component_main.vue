@@ -6,7 +6,7 @@
 export default {
   mounted() {
     document.title = "Home|RigaardArt";
-    console.log("Main component mounted.");
+    // console.log("Main component mounted.");
   }
 };
 </script>

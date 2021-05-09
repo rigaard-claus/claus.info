@@ -3,11 +3,11 @@ global.$ = $;
 
 let __page = "";
 
-let init_translate = function InitTranslator(page="main") {
+let init_translate = function InitTranslator(page="home") {
     // console.log("translator START");
     __page = page;
     check_lang_cookie();
-    var lang_menu = '<button onclick="change_lang(this);"><img src="/claus.info/img/lang_ru.png"></img></button>';
+    var lang_menu = '<button><img src="/claus.info/img/lang_ru.png"></img></button>';
 
     $(".language_float_btn").html(lang_menu);
     // console.log("translator END");
@@ -25,11 +25,6 @@ function change_lang(btn) {
     
     var url_lang_ru = "dat/lang_ru.json";
     var url_lang_en = "dat/lang_en.json";
-    
-    if(__page!="main" ) {
-        url_lang_ru = "../dat/lang_ru.json";
-        url_lang_en = "../dat/lang_en.json";
-    }
     
     if(lang_en) {
         $(img).attr( "src", src.replace("lang_ru","lang_en"));
@@ -55,7 +50,7 @@ function init_lang(lang) {
     if(lang === "ru") {
         var url_lang_ru = "dat/lang_ru.json";
 
-        if(__page!="main" ) {
+        if(__page!="home" ) {
             url_lang_ru = "../dat/lang_ru.json";
         }
         $.getJSON(url_lang_ru, function(data){
@@ -80,7 +75,7 @@ function set_lang(json) {
         $(this).html(json.main_menu[menu_index]);
         menu_index++;
     });
-    if(__page==="tool_menu" ) {
+    if(__page==="tools" ) {
         // main buttons
         var div_container = $(".btn_area");
         if(div_container.length > 0) {
@@ -120,4 +115,6 @@ function save_lang_cookie(val) {
     document.cookie = "default_lang=" + val + ";samesite=lax;path=/";
 }
 
-export {init_translate};
+let change_language = change_lang;
+
+export {change_language, init_translate};

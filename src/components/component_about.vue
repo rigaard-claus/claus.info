@@ -16,7 +16,7 @@
 export default {
   mounted() {
     document.title = "AboutMe|RigaardArt";
-    console.log("About component mounted.");
+    // console.log("About component mounted.");
   },
 };
 </script>

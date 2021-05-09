@@ -2,9 +2,9 @@ import {rigaard_radiant_chart} from './simple_rigaard_canvas';
 
 import {init_translate} from './translator';
 
-function InitHelper() {
+function InitHelper(page = "home") {
     DrawMainChart();
-    init_translate();
+    init_translate(page);
 }
 
 // function InitTools() {
@@ -39,11 +39,12 @@ function init_demo_radiant_chart() {
             + (ru_lang ?  'Замените или отредактируйте этот json ' : 'Replace or edit this json')
             + '</span><textarea type="textarea" id="txt_json_input" rows="3" cols="65">'
             + '{"Pyton":7,"C++":6,"Perl":7,"VB":9,"Java":6,"Delphi":8,"Ruby":6}'//default json line
-            + '</textarea></div></br><button onclick="demo_radiant_chart();" '
+            + '</textarea></div></br><button '
             + 'id="btn_create_chart_demo" class="btn_tool">' 
             + (ru_lang ? 'ПОСТРОИТЬ ДИАГРАММУ' : 'CREATE CHART')
             + '</button></div><div class="rigaard_canvas"></div></div>';
     $(main_div).html(div_demo_area);
+    $("#btn_create_chart_demo").on("click", function(){ demo_radiant_chart(); });
 }
 
 function demo_radiant_chart() {
@@ -125,5 +126,5 @@ function GetScript(url) {
         async: false
     });
 }
-
-export {InitHelper};
+let init_rad_chart = init_demo_radiant_chart;
+export {InitHelper, init_rad_chart};
