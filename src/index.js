@@ -1,5 +1,5 @@
-// import Vue from "./scr/vue" //dev
-import Vue from "./scr/vue.min" //production
+ import Vue from "./scr/vue" //dev
+//import Vue from "./scr/vue.min" //production
 global.Vue = Vue;
 
 import { change_language } from './scr/translator';
@@ -23,6 +23,7 @@ var app = new Vue({
     this.init_language();
   },
   data: {
+    maindev: false,
     current_component: 'main-component',
     page: 'home',
   },
@@ -50,7 +51,6 @@ var app = new Vue({
     },
 
     init_language() {
-      let vue_app = this;
       let lang_div = $(".language_float_btn");
       if (lang_div.length > 0) {
         $(lang_div).children("button").on("click", function () {

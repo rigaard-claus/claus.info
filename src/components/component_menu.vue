@@ -3,17 +3,17 @@
     <tbody>
       <tr>
         <th>
-          <a href="/claus.info/dist/?page=home">
+          <a :href="'/claus.info' + (devmode ? '/dist' : '') + '/?page=home'">
             <div class="first_menu_element">Home</div>
           </a>
         </th>
         <th>
-          <a href="/claus.info/dist/?page=tools">
+          <a :href="'/claus.info' + (devmode ? '/dist' : '') + '/?page=tools'">
             <div>Tools</div>
           </a>
         </th>
         <th>
-          <a href="/claus.info/dist/?page=about">
+          <a :href="'/claus.info' + (devmode ? '/dist' : '') + '/?page=about'">
             <div class="last_menu_element">About me</div>
           </a>
         </th>
@@ -23,9 +23,16 @@
 </template>
 
 <script>
+window.Event = new Vue();
+
 export default {
- mounted() {
+  data() {
+    return {
+      devmode: this.$parent.maindev
+    }
+  },
+  mounted() {
     // console.log("Menu component mounted.");
-  }
+  },
 };
 </script>

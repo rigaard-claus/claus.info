@@ -50,9 +50,6 @@ function init_lang(lang) {
     if(lang === "ru") {
         var url_lang_ru = "dat/lang_ru.json";
 
-        if(__page!="home" ) {
-            url_lang_ru = "../dat/lang_ru.json";
-        }
         $.getJSON(url_lang_ru, function(data){
             //change default icon
             var img = $(".language_float_btn").find("img");
